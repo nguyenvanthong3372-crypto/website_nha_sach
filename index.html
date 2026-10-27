@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookStore - Nhà sách trực tuyến</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ĐẦU TRANG: logo, tìm kiếm, giỏ hàng, đăng nhập -->
+    <header class="header" id="home">
+        <div class="header-top">
+            <a href="#home" class="logo">BOOK<span>STORE</span></a>
+            <form class="search-form" id="searchForm">
+                <input id="searchInput" type="text" placeholder="Tìm tên sách, tác giả..." aria-label="Tìm kiếm sách">
+                <button type="submit">Tìm kiếm</button>
+            </form>
+            <div class="header-actions">
+                <button type="button" class="header-button" id="cartButton">Giỏ hàng (<span id="cartCount">0</span>)</button>
+                <button type="button" class="header-button login-button" id="loginButton">Đăng nhập</button>
+            </div>
+        </div>
+        <nav class="main-menu">
+            <a href="#home">Trang chủ</a>
+            <a href="#categories">Danh mục sách</a>
+            <a href="#best-sellers">Sách bán chạy</a>
+            <a href="#new-books">Sách mới</a>
+            <a href="#promotions">Khuyến mãi</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- BANNER: sau này có thể thay khung chữ bằng ảnh banner -->
+        <section class="banner">
+            <div class="banner-content">
+                <p class="section-label">NHÀ SÁCH TRỰC TUYẾN</p>
+                <h1>Mở sách hay,<br>mở thế giới mới</h1>
+                <p>Khám phá những cuốn sách phù hợp với bạn.</p>
+                <a href="#best-sellers" class="primary-button">Khám phá sách</a>
+            </div>
+            <div class="banner-image-placeholder">VỊ TRÍ ẢNH BANNER</div>
+        </section>
+
+        <!-- DANH MỤC SÁCH -->
+        <section class="section" id="categories">
+            <div class="section-heading">
+                <div><p class="section-label">KHÁM PHÁ</p><h2>Danh mục sách</h2></div>
+            </div>
+            <div class="category-list">
+                <a href="#book-list" class="category-item">Văn học</a>
+                <a href="#book-list" class="category-item">Kinh tế</a>
+                <a href="#book-list" class="category-item">Kỹ năng sống</a>
+                <a href="#book-list" class="category-item">Thiếu nhi</a>
+                <a href="#book-list" class="category-item">Giáo trình</a>
+                <a href="#book-list" class="category-item">Ngoại ngữ</a>
+            </div>
+        </section>
+
+        <!-- SÁCH BÁN CHẠY -->
+        <section class="section" id="best-sellers">
+            <div class="section-heading">
+                <div><p class="section-label">ĐƯỢC YÊU THÍCH</p><h2>Sách bán chạy</h2></div>
+                <a href="#book-list" class="view-all">Xem tất cả →</a>
+            </div>
+            <div class="book-list" id="book-list">
+                <!-- Sao chép một article để thêm thẻ sách mới -->
+                <article class="book-card" data-name="Đắc Nhân Tâm" data-author="Dale Carnegie" data-category="Kỹ năng sống">
+                    <div class="book-image-placeholder">VỊ TRÍ ẢNH BÌA SÁCH</div>
+                    <p class="book-category">Kỹ năng sống</p>
+                    <h3 class="book-title">Đắc Nhân Tâm</h3>
+                    <p class="book-author">Tác giả: Dale Carnegie</p>
+                    <div class="book-price"><span class="current-price">86.000đ</span><span class="old-price">120.000đ</span></div>
+                    <button type="button" class="add-to-cart">Thêm vào giỏ</button>
+                </article>
+                <article class="book-card" data-name="Nhà Giả Kim" data-author="Paulo Coelho" data-category="Văn học">
+                    <div class="book-image-placeholder">VỊ TRÍ ẢNH BÌA SÁCH</div>
+                    <p class="book-category">Văn học</p>
+                    <h3 class="book-title">Nhà Giả Kim</h3>
+                    <p class="book-author">Tác giả: Paulo Coelho</p>
+                    <div class="book-price"><span class="current-price">79.000đ</span><span class="old-price">99.000đ</span></div>
+                    <button type="button" class="add-to-cart">Thêm vào giỏ</button>
+                </article>
+                <article class="book-card" data-name="Tuổi Trẻ Đáng Giá Bao Nhiêu" data-author="Rosie Nguyễn" data-category="Kỹ năng sống">
+                    <div class="book-image-placeholder">VỊ TRÍ ẢNH BÌA SÁCH</div>
+                    <p class="book-category">Kỹ năng sống</p>
+                    <h3 class="book-title">Tuổi Trẻ Đáng Giá Bao Nhiêu</h3>
+                    <p class="book-author">Tác giả: Rosie Nguyễn</p>
+                    <div class="book-price"><span class="current-price">90.000đ</span><span class="old-price">110.000đ</span></div>
+                    <button type="button" class="add-to-cart">Thêm vào giỏ</button>
+                </article>
+                <article class="book-card" data-name="Dế Mèn Phiêu Lưu Ký" data-author="Tô Hoài" data-category="Thiếu nhi">
+                    <div class="book-image-placeholder">VỊ TRÍ ẢNH BÌA SÁCH</div>
+                    <p class="book-category">Thiếu nhi</p>
+                    <h3 class="book-title">Dế Mèn Phiêu Lưu Ký</h3>
+                    <p class="book-author">Tác giả: Tô Hoài</p>
+                    <div class="book-price"><span class="current-price">55.000đ</span><span class="old-price">65.000đ</span></div>
+                    <button type="button" class="add-to-cart">Thêm vào giỏ</button>
+                </article>
+            </div>
+            <p class="no-results" id="noResults">Không tìm thấy sách phù hợp.</p>
+        </section>
+
+        <!-- SÁCH MỚI -->
+        <section class="section alternate-section" id="new-books">
+            <div class="section-heading">
+                <div><p class="section-label">VỪA CẬP NHẬT</p><h2>Sách mới</h2></div>
+                <a href="#book-list" class="view-all">Xem tất cả →</a>
+            </div>
+            <div class="simple-book-row">
+                <div class="simple-book"><div class="small-image-placeholder">VỊ TRÍ ẢNH</div><div><h3>Hiểu Về Trái Tim</h3><p>Tác giả: Minh Niệm</p><strong>98.000đ</strong></div></div>
+                <div class="simple-book"><div class="small-image-placeholder">VỊ TRÍ ẢNH</div><div><h3>Cây Cam Ngọt Của Tôi</h3><p>Tác giả: José Mauro</p><strong>105.000đ</strong></div></div>
+                <div class="simple-book"><div class="small-image-placeholder">VỊ TRÍ ẢNH</div><div><h3>Cho Tôi Xin Một Vé Đi Tuổi Thơ</h3><p>Tác giả: Nguyễn Nhật Ánh</p><strong>82.000đ</strong></div></div>
+            </div>
+        </section>
+
+        <!-- KHU VỰC KHUYẾN MÃI -->
+        <section class="section" id="promotions">
+            <div class="promotion-box">
+                <div><p class="section-label">ƯU ĐÃI DÀNH CHO BẠN</p><h2>Góc sách khuyến mãi</h2><p>Chọn sách yêu thích với mức giá ưu đãi.</p></div>
+                <div class="promotion-code"><span>MÃ GIẢM GIÁ</span><strong>SACHMOI10</strong><small>Ví dụ: giảm 10% cho đơn hàng phù hợp</small></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- CHÂN TRANG -->
+    <footer class="footer">
+        <div class="footer-column"><a href="#home" class="logo footer-logo">BOOK<span>STORE</span></a><p>Không gian dành cho người yêu sách.</p></div>
+        <div class="footer-column"><h3>Thông tin</h3><a href="#home">Giới thiệu nhà sách</a><a href="#home">Chính sách giao hàng</a><a href="#home">Chính sách đổi trả</a></div>
+        <div class="footer-column"><h3>Hỗ trợ khách hàng</h3><p>Email: abc@email.com</p><p>Điện thoại: 0123 456 789</p></div>
+        <div class="footer-bottom">© 2026 BookStore</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
