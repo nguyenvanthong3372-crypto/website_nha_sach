@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BookStore - Nhà sách trực tuyến</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,7 +11,7 @@
         <div class="header-top">
             <a href="#home" class="logo">BOOK<span>STORE</span></a>
             <form class="search-form" id="searchForm">
-                <input id="searchInput" type="text" placeholder="Tìm tên sách, tác giả..." aria-label="Tìm kiếm sách">
+                <input id="search" type="text" placeholder="Tìm tên sách, tác giả...">
                 <button type="submit">Tìm kiếm</button>
             </form>
             <div class="header-actions">
@@ -38,7 +37,7 @@
                 <p>Khám phá những cuốn sách phù hợp với bạn.</p>
                 <a href="#best-sellers" class="primary-button">Khám phá sách</a>
             </div>
-            <div class="banner-image-placeholder">VỊ TRÍ ẢNH BANNER</div>
+            <div class="banner-image-placeholder"><img src="anh/banner.jpg"></div>
         </section>
 
         <!-- DANH MỤC SÁCH -->
@@ -50,8 +49,8 @@
                 <a href="#book-list" class="category-item">Văn học</a>
                 <a href="#book-list" class="category-item">Kinh tế</a>
                 <a href="#book-list" class="category-item">Kỹ năng sống</a>
-                <a href="#book-list" class="category-item">Thiếu nhi</a>
-                <a href="#book-list" class="category-item">Giáo trình</a>
+                <a href="#book-list" class="category-item">Truyện tranh</a>
+                <a href="#book-list" class="category-item">Công nghệ</a>
                 <a href="#book-list" class="category-item">Ngoại ngữ</a>
             </div>
         </section>
@@ -65,7 +64,7 @@
             <div class="book-list" id="book-list">
                 <!-- Sao chép một article để thêm thẻ sách mới -->
                 <article class="book-card" data-name="Đắc Nhân Tâm" data-author="Dale Carnegie" data-category="Kỹ năng sống">
-                    <div class="book-image-placeholder">VỊ TRÍ ẢNH BÌA SÁCH</div>
+                    <div class="book-image-placeholder"><img src="anh/dacnhantam.jpg"></div>
                     <p class="book-category">Kỹ năng sống</p>
                     <h3 class="book-title">Đắc Nhân Tâm</h3>
                     <p class="book-author">Tác giả: Dale Carnegie</p>
@@ -73,7 +72,7 @@
                     <button type="button" class="add-to-cart">Thêm vào giỏ</button>
                 </article>
                 <article class="book-card" data-name="Nhà Giả Kim" data-author="Paulo Coelho" data-category="Văn học">
-                    <div class="book-image-placeholder">VỊ TRÍ ẢNH BÌA SÁCH</div>
+                    <div class="book-image-placeholder"><img src="anh/nhagiakim.jpg"></div>
                     <p class="book-category">Văn học</p>
                     <h3 class="book-title">Nhà Giả Kim</h3>
                     <p class="book-author">Tác giả: Paulo Coelho</p>
@@ -81,7 +80,7 @@
                     <button type="button" class="add-to-cart">Thêm vào giỏ</button>
                 </article>
                 <article class="book-card" data-name="Tuổi Trẻ Đáng Giá Bao Nhiêu" data-author="Rosie Nguyễn" data-category="Kỹ năng sống">
-                    <div class="book-image-placeholder">VỊ TRÍ ẢNH BÌA SÁCH</div>
+                    <div class="book-image-placeholder"><img src="anh/tuoitredanggiabaonhieu.jpg"></div>
                     <p class="book-category">Kỹ năng sống</p>
                     <h3 class="book-title">Tuổi Trẻ Đáng Giá Bao Nhiêu</h3>
                     <p class="book-author">Tác giả: Rosie Nguyễn</p>
@@ -89,10 +88,10 @@
                     <button type="button" class="add-to-cart">Thêm vào giỏ</button>
                 </article>
                 <article class="book-card" data-name="Dế Mèn Phiêu Lưu Ký" data-author="Tô Hoài" data-category="Thiếu nhi">
-                    <div class="book-image-placeholder">VỊ TRÍ ẢNH BÌA SÁCH</div>
-                    <p class="book-category">Thiếu nhi</p>
-                    <h3 class="book-title">Dế Mèn Phiêu Lưu Ký</h3>
-                    <p class="book-author">Tác giả: Tô Hoài</p>
+                    <div class="book-image-placeholder"><img src="anh/conan.jpg"></div>
+                    <p class="book-category">Truyện tranh</p>
+                    <h3 class="book-title">Conan</h3>
+                    <p class="book-author">Tác giả: Gosho Aoyama</p>
                     <div class="book-price"><span class="current-price">55.000đ</span><span class="old-price">65.000đ</span></div>
                     <button type="button" class="add-to-cart">Thêm vào giỏ</button>
                 </article>
@@ -107,9 +106,9 @@
                 <a href="#book-list" class="view-all">Xem tất cả →</a>
             </div>
             <div class="simple-book-row">
-                <div class="simple-book"><div class="small-image-placeholder">VỊ TRÍ ẢNH</div><div><h3>Hiểu Về Trái Tim</h3><p>Tác giả: Minh Niệm</p><strong>98.000đ</strong></div></div>
-                <div class="simple-book"><div class="small-image-placeholder">VỊ TRÍ ẢNH</div><div><h3>Cây Cam Ngọt Của Tôi</h3><p>Tác giả: José Mauro</p><strong>105.000đ</strong></div></div>
-                <div class="simple-book"><div class="small-image-placeholder">VỊ TRÍ ẢNH</div><div><h3>Cho Tôi Xin Một Vé Đi Tuổi Thơ</h3><p>Tác giả: Nguyễn Nhật Ánh</p><strong>82.000đ</strong></div></div>
+                <div class="simple-book"><div class="small-image-placeholder"><img src="anh/hieuvecontim.jpg"></div><div><h3>Hiểu Về Trái Tim</h3><p>Tác giả: Minh Niệm</p><strong>98.000đ</strong></div></div>
+                <div class="simple-book"><div class="small-image-placeholder"><img src="anh/caycamnggotcuatoi.jpg"></div><div><h3>Cây Cam Ngọt Của Tôi</h3><p>Tác giả: José Mauro</p><strong>105.000đ</strong></div></div>
+                <div class="simple-book"><div class="small-image-placeholder"><img src="anh/chôtixin1vedivetuoitho.jpg"></div><div><h3>Cho Tôi Xin Một Vé Đi Tuổi Thơ</h3><p>Tác giả: Nguyễn Nhật Ánh</p><strong>82.000đ</strong></div></div>
             </div>
         </section>
 
@@ -130,6 +129,6 @@
         <div class="footer-bottom">© 2026 BookStore</div>
     </footer>
 
-    <script src="script.js"></script>
+   //them                                                                                                                        <script src="script.js"></script>
 </body>
 </html>
